@@ -13,6 +13,7 @@ function Blog() {
                             <img src="https://preview.colorlib.com/theme/furnish/images/image_6.jpg.webp" alt="" />
                         </div>
                         <div className="right">
+                            <span style={{color:"#d57624",opacity:"1"}}>Comments</span>
                             <p>Shop the Look Cottage Country Living Room</p>
                             <span>A small river named Duden flows by their place.</span>
                         </div>
@@ -22,6 +23,7 @@ function Blog() {
                             <img src="https://preview.colorlib.com/theme/furnish/images/image_2.jpg.webp" alt="" />
                         </div>
                         <div className="right">
+                        <span style={{color:"#d57624",opacity:"1"}}>Comments</span>
                             <p>Shop the Look Cottage Country Living Room</p>
                             <span>A small river named Duden flows by their place.</span>
                         </div>
@@ -31,6 +33,7 @@ function Blog() {
                             <img src="https://preview.colorlib.com/theme/furnish/images/image_4.jpg.webp" alt="" />
                         </div>
                         <div className="right">
+                        <span style={{color:"#d57624",opacity:"1"}}>Comments</span>
                             <p>Shop the Look Cottage Country Living Room</p>
                             <span>A small river named Duden flows by their place.</span>
                         </div>
@@ -40,6 +43,7 @@ function Blog() {
                             <img src="https://preview.colorlib.com/theme/furnish/images/image_5.jpg.webp" alt="" />
                         </div>
                         <div className="right">
+                        <span style={{color:"#d57624",opacity:"1"}}>Comments</span>
                             <p>Shop the Look Cottage Country Living Room</p>
                             <span>A small river named Duden flows by their place.</span>
                         </div>

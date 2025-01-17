@@ -74,8 +74,8 @@ function Customers() {
                 </div>
                 <div className="card-wrapper">
                     {
-                        isLoading ? (
-                            <h1>...isLoading</h1>
+                        allData.length == 0 ? (
+                            <h1>Data Yoxdur</h1>
                         ) : (
                             allData.map((item) => (
                                 <div className="card" key={item._id}>

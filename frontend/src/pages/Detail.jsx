@@ -1,20 +1,26 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Helmet } from 'react-helmet'
 import { NavLink, useNavigate, useParams } from 'react-router'
 import { useGetDataByIdQuery } from '../app/Slices/furnishSlice'
 import { AiFillLike } from 'react-icons/ai'
 import { RiArrowGoBackFill } from "react-icons/ri";
+import { FurnishContext } from '../context/FurnishContext'
 
 function Detail() {
     let { id } = useParams()
     let { data, isLoading } = useGetDataByIdQuery(id)
-    let navigate = useNavigate()
-   
-    useEffect(()=>{
-        if (!data) {
-            navigate("*")
+    let { fav, setFav } = useContext(FurnishContext)
+
+    function handleFav(data) {
+        let find = fav.find((custom) => custom._id == data._id)
+        if (find) {
+            alert("daha once elave olunub")
         }
-    })
+        else {
+            setFav([...fav, data])
+        }
+    }
+    
     return (
         <>
             <Helmet>
@@ -39,7 +45,7 @@ function Detail() {
                                 <span>{data.work}</span>
                             </div>
                             <div className="btns" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-                                <button><AiFillLike /></button>
+                                <button onClick={() => handleFav(data)}><AiFillLike /></button>
                                 <button><NavLink  style={{ color: "#042b41" }} to={"/"}><RiArrowGoBackFill /></NavLink></button>
 
                             </div>
