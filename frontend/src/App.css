@@ -498,6 +498,7 @@
 }
 
 .Wishlist {
+  margin: 150px auto;
   .container {
     width: 60%;
     display: flex;
@@ -511,10 +512,6 @@
     .info {
       text-align: center;
 
-      span {
-        opacity: .5;
-        font-size: 18px;
-      }
 
       h1 {
         font-size: 30px;

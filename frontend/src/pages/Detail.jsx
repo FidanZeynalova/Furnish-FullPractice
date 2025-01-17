@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
-import { NavLink, useParams } from 'react-router'
+import { NavLink, useNavigate, useParams } from 'react-router'
 import { useGetDataByIdQuery } from '../app/Slices/furnishSlice'
 import { AiFillLike } from 'react-icons/ai'
 import { RiArrowGoBackFill } from "react-icons/ri";
@@ -8,7 +8,13 @@ import { RiArrowGoBackFill } from "react-icons/ri";
 function Detail() {
     let { id } = useParams()
     let { data, isLoading } = useGetDataByIdQuery(id)
-    console.log(data);
+    let navigate = useNavigate()
+   
+    useEffect(()=>{
+        if (!data) {
+            navigate("*")
+        }
+    })
     return (
         <>
             <Helmet>

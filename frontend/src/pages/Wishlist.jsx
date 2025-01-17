@@ -24,7 +24,6 @@ function Wishlist() {
             <div className="Wishlist">
                 <div className="container">
                     <div className="info">
-                        <span>Testimonial</span>
                         <h1>Wishlist Customers</h1>
                     </div>
                     <div className="card-wrapper">
