@@ -297,10 +297,10 @@
     }
 
     .card-wrapper {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
       align-items: center;
       gap: 20px;
+      width: 100%;
+      margin: 0px auto;
 
       .card {
         border-radius: 10px;
@@ -310,6 +310,11 @@
         gap: 20px;
         padding: 50px;
         width: 100%;
+        margin: 10px auto;
+        transition: all .5s ease;
+        &:hover{
+          box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
 
         &:nth-child(even) {
           background-color: #d57624;
@@ -372,8 +377,11 @@
   }
 
   @media (max-width:576px) {
-    .card-wrapper {
-      grid-template-columns: repeat(1, 1fr) !important;
+    .card{
+      width: 100% !important;
+     .head{
+      flex-direction: column !important;
+     }
     }
 
     .head {
@@ -453,6 +461,10 @@
   @media (max-width:576px) {
     .card-wrapper {
       grid-template-columns: repeat(1, 1fr) !important;
+      .card{
+        flex-direction: column !important;
+        padding: 20px !important;
+      }
     }
     .left{
       width: 300px !important;
